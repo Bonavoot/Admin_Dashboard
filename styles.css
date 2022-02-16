@@ -1,8 +1,9 @@
 :root {
     --black: rgb(26, 26, 26);
     --white-font: white;
-    --card-font-color: rgb(49, 49, 49);
+    --card-font-color: rgb(39, 39, 39);
     background-color: lightgray;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
@@ -185,7 +186,7 @@ img[src="icons/notifications_black_24dp.svg"] {
 
 .projects .title {
     position: absolute;
-    top: -35px;
+    top: -40px;
     left: 20px;
 }
 
