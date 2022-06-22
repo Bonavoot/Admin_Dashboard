@@ -2,7 +2,7 @@
   --black: rgb(26, 26, 26);
   --white-font: white;
   --card-font-color: rgb(39, 39, 39);
-  background-color: lightgray;
+  background-color: rgb(211, 211, 211);
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -12,7 +12,7 @@
   width: 100vw;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
-  background-color: lightgray;
+  background-color: rgb(211, 211, 211);
 }
 
 /* Sidebar content */
@@ -22,14 +22,13 @@
   grid-row: 1 / -1;
   background-color: var(--black);
   grid-template-rows: 10% 1fr 1fr;
-  min-width: 50%;
+  min-width: 90%;
   color: var(--white-font);
 }
 
 .nslogo {
+  width: 95%;
   height: auto;
-  width: 90%;
-  margin: 10px;
   background-color: rgb(255, 255, 255);
   padding: 10px;
 }
@@ -38,7 +37,6 @@
 .section2 {
   display: flex;
   flex-direction: column;
-
   align-items: flex-start;
   list-style: none;
 }
@@ -52,7 +50,7 @@
   align-items: center;
   gap: 15px;
   padding: 10px;
-  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px -2px rgba(0, 0, 0, 0.1);
 }
 
 img[src="icons/search_black_24dp.svg"] {
@@ -88,9 +86,6 @@ img[src="icons/notifications_black_24dp.svg"] {
   border-radius: 50%;
   background-image: url("icons/logo.jpg");
   background-size: 100%;
-}
-
-.account-name1 {
 }
 
 .account-name2 {
@@ -174,6 +169,12 @@ img[src="icons/notifications_black_24dp.svg"] {
   left: 20px;
 }
 
+.title2 {
+  position: absolute;
+  top: -53px;
+  right: 38px;
+}
+
 .card {
   display: grid;
   border-left: black 10px solid;
@@ -201,11 +202,12 @@ img[src="icons/notifications_black_24dp.svg"] {
 /* Main content Announcements */
 .announcements {
   position: relative;
-  grid-area: anouncement;
   border-radius: 10px;
   margin: 20px;
   background-color: rgb(255, 255, 255);
   height: fit-content;
+  width: 270px;
+  width: 2;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -215,12 +217,7 @@ img[src="icons/notifications_black_24dp.svg"] {
   border-top: none;
 }
 
-.announcement-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.announcements .title {
+.title2 {
   position: absolute;
   top: -55px;
 }
@@ -243,15 +240,14 @@ img[src="icons/notifications_black_24dp.svg"] {
 
 .trending {
   position: relative;
-  grid-area: trending;
   border-radius: 10px;
   background-color: white;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
-  padding: 10px;
+  gap: 25px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -265,12 +261,10 @@ img[src="icons/notifications_black_24dp.svg"] {
 }
 
 .trending img {
-  margin-right: 15px;
-  align-self: center;
-  max-height: 50px;
-  max-width: 50px;
+  margin-right: 10px;
+  height: 45px;
+  width: auto;
   border-radius: 50%;
-  margin-left: 25px;
 }
 
 .trending p {
@@ -284,22 +278,14 @@ img[src="icons/notifications_black_24dp.svg"] {
   top: -55px;
 }
 
-.section1 > li {
-  text-align: center;
-  display: block;
-  margin-bottom: 50px;
-}
-
-.section1 > li > img {
-  vertical-align: bottom;
-}
-
+.section1 > li,
 .section2 > li {
   text-align: center;
   display: block;
   margin-bottom: 50px;
 }
 
+.section1 > li > img,
 .section2 > li > img {
   vertical-align: bottom;
 }
@@ -324,4 +310,8 @@ button {
 
 img {
   cursor: pointer;
+}
+
+.avatar {
+  min-width: fit-content;
 }
